@@ -41,16 +41,16 @@ int main()
         return 0;
     }*/
 
-/*
+
     //Load music to play
     sf::Music music;
-    if (!music.openFromFile("chill_Lofi.wav"))
+    if (!music.openFromFile("../assets/chill_Lofi.wav"))
     {
         return -1; //error
     }
     music.play();
 
-*/
+
     while (window.isOpen())
     {
 
