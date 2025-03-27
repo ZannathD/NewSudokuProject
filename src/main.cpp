@@ -28,12 +28,12 @@ int main()
         {0, 0, 0, 0, 9, 0, 0, 0, 4}
     };
 /*
-    sf::Font font("arial.ttf");
-    sf::Text text(font);
+    sf::Font font;
+    if (!font.loadFromFile(../assets/"arial.ttf"))
 */
     auto window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "CMake SFML Project");
     window.setFramerateLimit(144);
-
+/*
     // Load Rabbids Picture
     /*sf::Texture texture;
     if (!texture.loadFromFile("IMG_2635.jpeg")
