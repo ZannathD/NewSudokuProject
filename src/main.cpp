@@ -9,7 +9,7 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-
+#include <SFML/Graphics/Font.hpp>
 
 
 int main()
@@ -27,20 +27,25 @@ int main()
         {7, 8, 0, 4, 0, 0, 0, 0, 9},
         {0, 0, 0, 0, 9, 0, 0, 0, 4}
     };
-/*
-    sf::Font font;
-    if (!font.loadFromFile(../assets/"arial.ttf"))
-*/
+
+    sf::Font font("../assets/arial.ttf"); // Declare the font object
+    sf::Text text(font); //Declare the text object
+    text.setFont(font);
+    text.setStyle(sf::Text::Regular);
+
+
     auto window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "CMake SFML Project");
     window.setFramerateLimit(144);
-/*
+
+
+    /*
     // Load Rabbids Picture
     /*sf::Texture texture;
     if (!texture.loadFromFile("IMG_2635.jpeg")
     {
         return 0;
-    }*/
-
+    }
+    */
 
     //Load music to play
     sf::Music music;
@@ -63,7 +68,7 @@ int main()
         }
 
         window.clear();
-/*
+
         for (column = 0; column < 9; column++)
         {
             for (row = 0; row < 9; row++)
@@ -73,7 +78,7 @@ int main()
                 window.draw(text);
             }
         }
-*/
+
         window.display();
     }
 }
