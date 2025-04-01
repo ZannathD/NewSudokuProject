@@ -16,6 +16,7 @@
 int main()
 {
     int column, row;
+    bool keyDownProcessed = false;
     int playerBoard [9][9] =
         {
         {2, 0, 0, 0, 6, 0, 0, 0, 0},
@@ -63,21 +64,12 @@ int main()
 
 
     //User Input
-    int selectedRow = -1, selectedColumn = -1;
+    int selectedRow = -2, selectedColumn = -2;
 
     //Display beginning
 
     auto window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "CMake SFML Project");
     window.setFramerateLimit(144);
-
-
-    // Load Rabbids Picture
-    sf::Texture texture;
-    if (!texture.loadFromFile("../assets/IMG_2635.jpeg"))
-    {
-        return 0;
-    }
-
 
 
     //Load music to play
@@ -112,38 +104,85 @@ int main()
                 else
                 {
                     //Default selected box/row so hitting numbers before clicking doesn't change anything
-                    selectedColumn =  -1;
-                    selectedRow = -1;
+                    selectedColumn =  -2;
+                    selectedRow = -2;
                 }
             }
         }
 
 
-        if (isKeyPressed(sf::Keyboard::Key::Down))
+
+        if (!keyDownProcessed)
         {
-            selectedRow = selectedRow + 1;
-            //keyDownProcessed
-            std::cout << selectedRow << std::endl;
-            std::cout << selectedColumn << std::endl;
+            if (isKeyPressed(sf::Keyboard::Key::Down))
+            {
+                selectedRow = selectedRow + 1;
+
+                keyDownProcessed = true;
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Up))
+            {
+                selectedRow = selectedRow - 1;
+                keyDownProcessed = true;
+
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Right))
+            {
+                selectedColumn = selectedColumn + 1;
+                keyDownProcessed = true;
+
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Left))
+            {
+                selectedColumn = selectedColumn - 1;
+                keyDownProcessed = true;
+
+            }
         }
-        else if (isKeyPressed(sf::Keyboard::Key::Up))
+
+        //Keeping selected Row / Column in the bounds of the board
+        if (selectedRow == 9 && selectedColumn == 8 || selectedRow == 8 && selectedColumn == 9)
         {
-            selectedRow = selectedRow - 1;
-            std::cout << selectedRow << std::endl;
-            std::cout << selectedColumn << std::endl;
+            selectedRow = 0;
+            selectedColumn = 0;
         }
-        else if (isKeyPressed(sf::Keyboard::Key::Right))
+        else if (selectedRow == -1 && selectedColumn == 0 || selectedRow == 0 && selectedColumn == -1)
         {
-            selectedColumn = selectedColumn + 1;
-            std::cout << "Row: " << selectedRow << std::endl;
-            std::cout << "Column: " << selectedColumn << std::endl;
+            selectedRow = 8;
+            selectedColumn = 8;
         }
-        else if (isKeyPressed(sf::Keyboard::Key::Left))
+        else if (selectedColumn == -1)
         {
-            selectedColumn = selectedColumn - 1;
-            std::cout << selectedRow << std::endl;
-            std::cout << selectedColumn << std::endl;
+            selectedColumn = 8;
+            selectedRow -= 1;
         }
+        else if (selectedColumn == 9)
+        {
+            selectedColumn = 0;
+            selectedRow += 1;
+        }
+        else if (selectedRow == -1)
+        {
+            selectedRow = 8;
+            selectedColumn -= 1;
+        }
+        else if (selectedRow == 9)
+        {
+            selectedRow = 0;
+            selectedColumn += 1;
+        }
+
+
+
+        //Reset stop for triggering event multiple times
+        if (!isKeyPressed(sf::Keyboard::Key::Down) &&
+                   !isKeyPressed(sf::Keyboard::Key::Up) &&
+                   !isKeyPressed(sf::Keyboard::Key::Left) &&
+                   !isKeyPressed(sf::Keyboard::Key::Right))
+        {
+            keyDownProcessed = false;  // Reset when no arrow key is pressed
+        }
+
         //Keyboard input for user to edit board
         if (selectedRow != -1 && selectedColumn != -1)
         {
@@ -194,16 +233,18 @@ int main()
         window.clear();
 
 
-
-        //main menu code
         //Creating blank sudoku grid
         for (column = 0; column < 9; column++)
         {
             for (row = 0; row < 9; row++)
             {
                 sf::RectangleShape box(sf::Vector2f(boxSize, boxSize));
-                box.setPosition(sf::Vector2f(row * boxSize, column * boxSize));
+                box.setPosition(sf::Vector2f(column * boxSize, row * boxSize));
                 box.setFillColor(boxColor);
+                if (column == selectedColumn && row == selectedRow)
+                {
+                    box.setFillColor(sf::Color::Yellow);
+                }
                 box.setOutlineThickness(2.f);
                 box.setOutlineColor(outlineColor);
                 window.draw(box);
