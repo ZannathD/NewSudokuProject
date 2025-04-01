@@ -14,5 +14,9 @@ FetchContent_MakeAvailable(SFML)
 
 add_executable(main src/main.cpp)
 target_compile_features(main PRIVATE cxx_std_17)
+
+#added audio for music
 target_link_libraries(main PRIVATE SFML::Graphics SFML::Audio)
+
+#This just duplicates a folder to another location in the dir - this is unnecessary now
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}) #copy assets to bin folder.

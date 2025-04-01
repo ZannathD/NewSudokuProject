@@ -9,7 +9,8 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include <SFML/Graphics/Font.hpp>
+#include <optional>
+
 
 
 int main()
@@ -28,17 +29,35 @@ int main()
         {0, 0, 0, 0, 9, 0, 0, 0, 4}
     };
 
-    sf::Font font("../assets/arial.ttf"); // Declare the font object
+    //Sudoku Board specifications
+    float boxSize = 60.f;
+    sf::Color boxColor(255, 255,255);
+    sf::Color outlineColor(0, 0, 0);
+
+    //Setting up which font to use
+    sf::Font font;
+    if (!font.openFromFile("../assets/arial.ttf"))
+    {
+        std::cerr << "Error loading font!\n";
+        return -1;
+    }
+
+    // Declaring text, and what text to use  -- RENAME -- NUMBERS ON BOARD --
     sf::Text text(font); //Declare the text object
     text.setFont(font);
+    text.setCharacterSize(30);
     text.setStyle(sf::Text::Regular);
 
+
+    //User Input
+    int selectedRow = -1, selectedColumn = -1;
+
+    //Display beginning
 
     auto window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "CMake SFML Project");
     window.setFramerateLimit(144);
 
 
-    /*
     // Load Rabbids Picture
     /*sf::Texture texture;
     if (!texture.loadFromFile("IMG_2635.jpeg")
@@ -46,6 +65,7 @@ int main()
         return 0;
     }
     */
+
 
     //Load music to play
     sf::Music music;
@@ -65,7 +85,70 @@ int main()
             {
                 window.close();
             }
+            if (isButtonPressed(sf::Mouse::Button::Left))
+            {
+                sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+                selectedRow = mousePos.y / boxSize;
+                selectedColumn = mousePos.x / boxSize;
+                if (selectedColumn >= 0 && selectedColumn < 9 && selectedRow >= 0 && selectedRow <9)
+                {
+                    std::cout << "Selected cell: (" << selectedColumn << ", " << selectedRow << ")" << std::endl;
+                }
+                else
+                {
+                    selectedColumn  -1;
+                    selectedRow = -1;
+                }
+            }
         }
+
+        if (selectedRow != -1 && selectedColumn != -1)
+        {
+            if (isKeyPressed(sf::Keyboard::Key::Num1))
+            {
+                board[selectedColumn][selectedRow] = 1;
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Num2))
+            {
+                board[selectedColumn][selectedRow] = 2;
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Num3))
+            {
+                board[selectedColumn][selectedRow] = 3;
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Num4))
+            {
+                board[selectedColumn][selectedRow] = 4;
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Num5))
+            {
+                board[selectedColumn][selectedRow] = 5;
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Num6))
+            {
+                board[selectedColumn][selectedRow] = 6;
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Num7))
+            {
+                board[selectedColumn][selectedRow] = 7;
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Num8))
+            {
+                board[selectedColumn][selectedRow] = 8;
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Num9))
+            {
+                board[selectedColumn][selectedRow] = 9;
+            }
+            else if (isKeyPressed(sf::Keyboard::Key::Num0))
+            {
+                board[selectedColumn][selectedRow] = 0;
+            }
+
+        }
+
+
+
 
         window.clear();
 
@@ -73,11 +156,37 @@ int main()
         {
             for (row = 0; row < 9; row++)
             {
-                text.setString(std::to_string(board[row][column]));
-                text.setPosition(sf::Vector2f(column * 50 + 15, row * 50+10));
-                window.draw(text);
+                sf::RectangleShape box(sf::Vector2f(boxSize, boxSize));
+                box.setPosition(sf::Vector2f(column * boxSize, row * boxSize));
+                box.setFillColor(boxColor);
+                box.setOutlineThickness(2.f);
+                box.setOutlineColor(outlineColor);
+                window.draw(box);
+
+                }
             }
+
+        for (column = 0; column < 9; column++)
+        {
+            for (row = 0; row < 9; row++)
+            {
+                if (board[column][row] != 0)
+                {
+                   // std::cout << "Text position: (" << column * boxSize + 20 << ", " << row * boxSize + 15 << ")" << std::endl;
+                    sf::Text text(font, std::to_string(board[column][row]), 30);
+                    text.setPosition(sf::Vector2f(column * boxSize + 20, row * boxSize + 15));
+                    text.setFillColor(sf::Color::Black);
+                    window.draw(text);
+                }
+            }
+
         }
+
+
+
+
+
+
 
         window.display();
     }
