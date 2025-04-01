@@ -10,7 +10,67 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <optional>
+#include <unordered_set>
 
+
+//Checking Sudoku board
+bool Solution(int playerBoard[9][9])
+{
+   for (int row = 0; row < 9; row++)
+   {
+       std::unordered_set<int> rowSet;
+       for (int column = 0; column < 9; column++)
+       {
+           if (playerBoard[row][column] != 0)
+           {
+               if (rowSet.find(playerBoard[row][column]) != rowSet.end())
+               {
+                   return false;
+               }
+           }
+           rowSet.insert(playerBoard[row][column]);
+       }
+   }
+
+    for (int column = 0; column < 9; column++)
+        {
+        std::unordered_set<int> colSet;
+        for (int row = 0; row < 9; ++row)
+            {
+            if (playerBoard[row][column] != 0)
+                {
+                if (colSet.find(playerBoard[row][column]) != colSet.end())
+                    {
+                    return false;  // Duplicate found in the column
+                    }
+                colSet.insert(playerBoard[row][column]);
+                }
+            }
+        }
+    for (int boxRow = 0; boxRow < 9; boxRow += 3)
+    {
+        for (int boxCol = 0; boxCol < 9; boxCol += 3)
+        {
+            std::unordered_set<int> boxSet;
+            for (int counter = 0; counter < 3; counter++)
+            {
+                for (int iterator = 0; iterator < 3; iterator++)
+                {
+                    int currentVal = playerBoard[boxRow + counter][boxCol + iterator];
+                    if (currentVal != 0)
+                    {
+                        if (boxSet.find(currentVal) != boxSet.end())
+                        {
+                            return false;  // Duplicate found in the box
+                        }
+                        boxSet.insert(currentVal);
+                    }
+                }
+            }
+        }
+    }
+    return true;
+}
 
 
 int main()
@@ -19,28 +79,42 @@ int main()
     bool keyDownProcessed = false;
     int playerBoard [9][9] =
         {
-        {2, 0, 0, 0, 6, 0, 0, 0, 0},
-        {3, 0, 0, 0, 0, 2, 0, 8, 5},
-        {6, 0, 0, 0, 0, 3, 1, 0, 0},
-        {0, 2, 5, 9, 0, 0, 0, 7, 3},
-        {9, 0, 7, 5, 8, 4, 2, 0, 6},
-        {1, 4, 0, 0, 0, 7, 9, 5, 0},
-        {0, 0, 9, 2, 0, 0, 0, 0, 1},
-        {7, 8, 0, 4, 0, 0, 0, 0, 9},
-        {0, 0, 0, 0, 9, 0, 0, 0, 4}
+        {0, 3, 0, 6, 0, 0, 0, 8, 0},
+        {7, 8, 0, 1, 4, 9, 0, 0, 5},
+        {1, 2, 4, 0, 3, 5, 0, 0, 0},
+        {0, 5, 0, 7, 0, 0, 0, 1, 0},
+        {0, 0, 2, 3, 0, 0, 0, 0, 6},
+        {0, 1, 3, 0, 0, 0, 0, 4, 8},
+        {0, 4, 0, 5, 1, 6, 3, 0, 9},
+        {0, 0, 5, 2, 0, 0, 0, 0, 1},
+        {0, 0, 0, 0, 9, 3, 5, 7, 2}
         };
+
 
     int initialBoard [9][9] =
     {
-        {2, 0, 0, 0, 6, 0, 0, 0, 0},
-        {3, 0, 0, 0, 0, 2, 0, 8, 5},
-        {6, 0, 0, 0, 0, 3, 1, 0, 0},
-        {0, 2, 5, 9, 0, 0, 0, 7, 3},
-        {9, 0, 7, 5, 8, 4, 2, 0, 6},
-        {1, 4, 0, 0, 0, 7, 9, 5, 0},
-        {0, 0, 9, 2, 0, 0, 0, 0, 1},
-        {7, 8, 0, 4, 0, 0, 0, 0, 9},
-        {0, 0, 0, 0, 9, 0, 0, 0, 4}
+        {0, 3, 0, 6, 0, 0, 0, 8, 0},
+        {7, 8, 0, 1, 4, 9, 0, 0, 5},
+        {1, 2, 4, 0, 3, 5, 0, 0, 0},
+        {0, 5, 0, 7, 0, 0, 0, 1, 0},
+        {0, 0, 2, 3, 0, 0, 0, 0, 6},
+        {0, 1, 3, 0, 0, 0, 0, 4, 8},
+        {0, 4, 0, 5, 1, 6, 3, 0, 9},
+        {0, 0, 5, 2, 0, 0, 0, 0, 1},
+        {0, 0, 0, 0, 9, 3, 5, 7, 2}
+    };
+
+    int solnBoard [9][9] =
+    {
+     {5, 3, 9, 6, 2, 7, 1, 8, 4},
+     {7, 8, 6, 1, 4, 9, 3, 2, 5},
+     {1, 2, 4, 8, 3, 5, 6, 9, 7},
+     {9, 5, 8, 7, 6, 4, 2, 1, 3},
+     {4, 7, 2, 3, 8, 1, 9, 5, 6},
+     {6, 1, 3, 9, 5, 2, 7, 4, 8},
+     {2, 4, 7, 5, 1, 6, 8, 3, 9},
+     {3, 9, 5, 2, 7, 8, 4, 6, 1},
+     {8, 6, 1, 4, 9, 3, 5, 7, 2}
     };
 
     //Sudoku Board specifications
@@ -277,7 +351,9 @@ int main()
 
 
         }
+
         window.display();
     }
+    std::cout << Solution(playerBoard) << std::endl;
 }
 
