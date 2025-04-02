@@ -120,7 +120,9 @@ int main()
     //Sudoku Board specifications
     float boxSize = 60.f;
     sf::Color boxColor(255, 255,255);
+    boxColor.a = 200;
     sf::Color outlineColor(0, 0, 0);
+
 
     //Setting up which font to use
     sf::Font font;
@@ -136,6 +138,9 @@ int main()
     text.setCharacterSize(30);
     text.setStyle(sf::Text::Regular);
 
+    sf::Texture background;
+    background.loadFromFile("../../assets/background.jpg");
+    sf::Sprite sprBackground(background);
 
     //User Input
     int selectedRow = -2, selectedColumn = -2;
@@ -168,8 +173,8 @@ int main()
             if (isButtonPressed(sf::Mouse::Button::Left))
             {
                 sf::Vector2i mousePos = sf::Mouse::getPosition(window);
-                selectedRow = mousePos.y / boxSize;
-                selectedColumn = mousePos.x / boxSize;
+                selectedRow = (mousePos.y - 270) / boxSize;
+                selectedColumn = (mousePos.x - 690) / boxSize;
                 if (selectedColumn >= 0 && selectedColumn < 9 && selectedRow >= 0 && selectedRow <9)
                 {
                     //Checking what box was clicked
@@ -306,6 +311,7 @@ int main()
 
         window.clear();
 
+        window.draw(sprBackground);
 
         //Creating blank sudoku grid
         for (column = 0; column < 9; column++)
@@ -313,7 +319,7 @@ int main()
             for (row = 0; row < 9; row++)
             {
                 sf::RectangleShape box(sf::Vector2f(boxSize, boxSize));
-                box.setPosition(sf::Vector2f(column * boxSize, row * boxSize));
+                box.setPosition(sf::Vector2f(690 + column * boxSize, 270 + row * boxSize));
                 box.setFillColor(boxColor);
                 if (column == selectedColumn && row == selectedRow)
                 {
@@ -335,7 +341,7 @@ int main()
                 if (playerBoard[row][column] != 0 && initialBoard[row][column] == 0)
                 {
                     sf::Text text(font, std::to_string(playerBoard[row][column]), 30);
-                    text.setPosition(sf::Vector2f(column * boxSize + 20, row * boxSize + 15));
+                    text.setPosition(sf::Vector2f(690 + column * boxSize + 20, 270 + row * boxSize + 15));
                     text.setFillColor(sf::Color::Blue);
                     window.draw(text);
                 }
@@ -343,7 +349,7 @@ int main()
                 {
                    // std::cout << "Text position: (" << column * boxSize + 20 << ", " << row * boxSize + 15 << ")" << std::endl;
                     sf::Text text(font, std::to_string(initialBoard[row][column]), 30);
-                    text.setPosition(sf::Vector2f(column * boxSize + 20, row * boxSize + 15));
+                    text.setPosition(sf::Vector2f(690 + column * boxSize + 20, 270 + row * boxSize + 15));
                     text.setFillColor(sf::Color::Black);
                     window.draw(text);
                 }
