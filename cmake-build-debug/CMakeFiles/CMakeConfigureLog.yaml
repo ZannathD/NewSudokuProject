@@ -1,0 +1,1778 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-enqmsq"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-enqmsq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-enqmsq'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_f189a
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f189a.dir/'
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f189a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\steph\\AppData\\Local\\Temp\\cc4M0ZLx.s
+        GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"
+        ignoring nonexistent directory "/win/include"
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        Compiler executable checksum: e75de627edc3c57e31324b930b15b056
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f189a.dir/'
+         as -v -o CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\steph\\AppData\\Local\\Temp\\cc4M0ZLx.s
+        GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
+        COMPILER_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.'\x0d
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -v -Wl,-v CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f189a.exe -Wl,--out-implib,libcmTC_f189a.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe
+        COLLECT_LTO_WRAPPER=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COMPILER_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f189a.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f189a.'
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_f189a.exe C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f189a.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        collect2 version 13.1.0
+        C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin/ld.exe -m i386pep -Bdynamic -o cmTC_f189a.exe C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f189a.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        GNU ld (GNU Binutils) 2.40
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f189a.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f189a.'\x0d
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/include]
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/include;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-enqmsq']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_f189a]
+        ignore line: [[1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f189a.dir/']
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f189a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\steph\\AppData\\Local\\Temp\\cc4M0ZLx.s]
+        ignore line: [GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/win/include"]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: e75de627edc3c57e31324b930b15b056]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f189a.dir/']
+        ignore line: [ as -v -o CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\steph\\AppData\\Local\\Temp\\cc4M0ZLx.s]
+        ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
+        ignore line: [COMPILER_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.'\x0d]
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -v -Wl -v CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f189a.exe -Wl --out-implib libcmTC_f189a.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COMPILER_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f189a.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f189a.']
+        link line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_f189a.exe C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f189a.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+          arg [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_f189a.exe] ==> ignore
+          arg [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+          arg [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_f189a.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-liconv] ==> lib [iconv]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
+          arg [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [collect2 version 13.1.0]
+        ignore line: [C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin/ld.exe -m i386pep -Bdynamic -o cmTC_f189a.exe C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_f189a.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f189a.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        linker tool for 'CXX': C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/ld.exe
+        remove lib [msvcrt]
+        remove lib [msvcrt]
+        collapse obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
+        collapse obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+        collapse obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
+        collapse obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit libs: [stdc++;mingw32;gcc_s;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex;kernel32]
+        implicit objs: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        implicit dirs: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/ld.exe" "-v"
+      GNU ld (GNU Binutils) 2.40
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "cmake-build-debug/_deps/sfml-src/CMakeLists.txt:32 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "cmake-build-debug/_deps/sfml-src/CMakeLists.txt:32 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v28pm4"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v28pm4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v28pm4'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_e9ac2
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj -c C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_e9ac2.dir/'
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e9ac2.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\steph\\AppData\\Local\\Temp\\cc3R5ysi.s
+        GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"
+        ignoring nonexistent directory "/win/include"
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"
+        ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_e9ac2.dir/'
+         as -v -o CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj C:\\Users\\steph\\AppData\\Local\\Temp\\cc3R5ysi.s
+        GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
+        COMPILER_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../\x0d
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.'\x0d
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -v -Wl,-v CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj -o cmTC_e9ac2.exe -Wl,--out-implib,libcmTC_e9ac2.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe
+        COLLECT_LTO_WRAPPER=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COMPILER_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e9ac2.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_e9ac2.'
+         C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_e9ac2.exe C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_e9ac2.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        collect2 version 13.1.0
+        C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin/ld.exe -m i386pep -Bdynamic -o cmTC_e9ac2.exe C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_e9ac2.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o\x0d
+        GNU ld (GNU Binutils) 2.40\x0d
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e9ac2.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_e9ac2.'\x0d
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "cmake-build-debug/_deps/sfml-src/CMakeLists.txt:32 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+          add: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/include]
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        collapse include dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/include;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "cmake-build-debug/_deps/sfml-src/CMakeLists.txt:32 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v28pm4']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_e9ac2]
+        ignore line: [[1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj -c C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_e9ac2.dir/']
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e9ac2.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\steph\\AppData\\Local\\Temp\\cc3R5ysi.s]
+        ignore line: [GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/win/include"]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        ignore line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_e9ac2.dir/']
+        ignore line: [ as -v -o CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj C:\\Users\\steph\\AppData\\Local\\Temp\\cc3R5ysi.s]
+        ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
+        ignore line: [COMPILER_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.'\x0d]
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -v -Wl -v CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj -o cmTC_e9ac2.exe -Wl --out-implib libcmTC_e9ac2.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COMPILER_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e9ac2.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_e9ac2.']
+        link line: [ C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_e9ac2.exe C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_e9ac2.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+          arg [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_e9ac2.exe] ==> ignore
+          arg [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+          arg [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_e9ac2.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_eh] ==> lib [gcc_eh]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-liconv] ==> lib [iconv]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_eh] ==> lib [gcc_eh]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
+          arg [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [collect2 version 13.1.0]
+        ignore line: [C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin/ld.exe -m i386pep -Bdynamic -o cmTC_e9ac2.exe C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_e9ac2.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_e9ac2.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o\x0d]
+        linker tool for 'C': C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/ld.exe
+        remove lib [gcc_eh]
+        remove lib [msvcrt]
+        remove lib [gcc_eh]
+        remove lib [msvcrt]
+        collapse obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
+        collapse obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+        collapse obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
+        collapse obj [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit libs: [mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex;kernel32]
+        implicit objs: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        implicit dirs: [C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib/gcc;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib;C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "cmake-build-debug/_deps/sfml-src/CMakeLists.txt:32 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Users/steph/AppData/Local/Programs/CLion/bin/mingw/bin/ld.exe" "-v"
+      GNU ld (GNU Binutils) 2.40
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "cmake-build-debug/_deps/sfml-src/src/SFML/System/CMakeLists.txt:69 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ruese2"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ruese2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ruese2'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_23628
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_23628.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ruese2/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_23628.dir/src.c.obj -o cmTC_23628.exe -Wl,--out-implib,libcmTC_23628.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake:89 (try_compile)"
+      - "cmake-build-debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:317 (check_include_file_cxx)"
+    checks:
+      - "Looking for C++ include dinput.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-demk47"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-demk47"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "DINPUT_H_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-demk47'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_218ec
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_218ec.dir/CheckIncludeFile.cxx.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-demk47/CheckIncludeFile.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   CMakeFiles/cmTC_218ec.dir/CheckIncludeFile.cxx.obj -o cmTC_218ec.exe -Wl,--out-implib,libcmTC_218ec.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:342 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test ATOMIC_TEST"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-de1ij5"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-de1ij5"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "ATOMIC_TEST"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-de1ij5'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_514c0
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -DATOMIC_TEST  -fdiagnostics-color=always -o CMakeFiles/cmTC_514c0.dir/src.cxx.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-de1ij5/src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   CMakeFiles/cmTC_514c0.dir/src.cxx.obj -o cmTC_514c0.exe -Wl,--out-implib,libcmTC_514c0.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:57 (check_include_files)"
+    checks:
+      - "Looking for include file inttypes.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m0wpce"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m0wpce"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "INCLUDE_INTTYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m0wpce'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_943d0
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_943d0.dir/INCLUDE_INTTYPES_H.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m0wpce/INCLUDE_INTTYPES_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_943d0.dir/INCLUDE_INTTYPES_H.c.obj -o cmTC_943d0.exe -Wl,--out-implib,libcmTC_943d0.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:58 (check_include_files)"
+    checks:
+      - "Looking for include file stdint.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-w03em7"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-w03em7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "INCLUDE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-w03em7'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_c7aa1
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_c7aa1.dir/INCLUDE_STDINT_H.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-w03em7/INCLUDE_STDINT_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_c7aa1.dir/INCLUDE_STDINT_H.c.obj -o cmTC_c7aa1.exe -Wl,--out-implib,libcmTC_c7aa1.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:59 (check_include_files)"
+    checks:
+      - "Looking for include file sys/types.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-svhmly"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-svhmly"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "INCLUDE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-svhmly'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_a412e
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_a412e.dir/INCLUDE_SYS_TYPES_H.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-svhmly/INCLUDE_SYS_TYPES_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_a412e.dir/INCLUDE_SYS_TYPES_H.c.obj -o cmTC_a412e.exe -Wl,--out-implib,libcmTC_a412e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:251 (check_include_file)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-088xsq"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-088xsq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-088xsq'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_adea4
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_adea4.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-088xsq/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_adea4.dir/CheckIncludeFile.c.obj -o cmTC_adea4.exe -Wl,--out-implib,libcmTC_adea4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:252 (check_include_file)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-48oi00"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-48oi00"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-48oi00'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_329ed
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_329ed.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-48oi00/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_329ed.dir/CheckIncludeFile.c.obj -o cmTC_329ed.exe -Wl,--out-implib,libcmTC_329ed.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:253 (check_include_file)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ci0py5"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ci0py5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ci0py5'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_f5d3f
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_f5d3f.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ci0py5/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_f5d3f.dir/CheckIncludeFile.c.obj -o cmTC_f5d3f.exe -Wl,--out-implib,libcmTC_f5d3f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int16_t"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6ja506"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6ja506"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT16_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6ja506'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_cf5af
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_cf5af.dir/INT16_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6ja506/INT16_SIZE.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_cf5af.dir/INT16_SIZE.c.obj -o cmTC_cf5af.exe -Wl,--out-implib,libcmTC_cf5af.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:4 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of uint16_t"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lrkaff"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lrkaff"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_UINT16_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lrkaff'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_6e7b1
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_6e7b1.dir/UINT16_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lrkaff/UINT16_SIZE.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_6e7b1.dir/UINT16_SIZE.c.obj -o cmTC_6e7b1.exe -Wl,--out-implib,libcmTC_6e7b1.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:5 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of u_int16_t"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nm7eky"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nm7eky"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_U_INT16_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nm7eky'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_892d7
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_892d7.dir/U_INT16_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nm7eky/U_INT16_SIZE.c
+        FAILED: CMakeFiles/cmTC_892d7.dir/U_INT16_SIZE.c.obj 
+        C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_892d7.dir/U_INT16_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nm7eky/U_INT16_SIZE.c
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nm7eky/U_INT16_SIZE.c:27:22: error: 'u_int16_t' undeclared here (not in a function); did you mean 'uint16_t'?
+           27 | #define SIZE (sizeof(u_int16_t))
+              |                      ^~~~~~~~~
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nm7eky/U_INT16_SIZE.c:29:12: note: in expansion of macro 'SIZE'
+           29 |   ('0' + ((SIZE / 10000)%10)),
+              |            ^~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:6 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int32_t"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-45svnz"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-45svnz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT32_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-45svnz'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_dfae8
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_dfae8.dir/INT32_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-45svnz/INT32_SIZE.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_dfae8.dir/INT32_SIZE.c.obj -o cmTC_dfae8.exe -Wl,--out-implib,libcmTC_dfae8.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:7 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of uint32_t"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-djuarl"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-djuarl"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_UINT32_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-djuarl'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_60671
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_60671.dir/UINT32_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-djuarl/UINT32_SIZE.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_60671.dir/UINT32_SIZE.c.obj -o cmTC_60671.exe -Wl,--out-implib,libcmTC_60671.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:8 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of u_int32_t"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq7d4g"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq7d4g"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_U_INT32_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq7d4g'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_66c34
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_66c34.dir/U_INT32_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq7d4g/U_INT32_SIZE.c
+        FAILED: CMakeFiles/cmTC_66c34.dir/U_INT32_SIZE.c.obj 
+        C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_66c34.dir/U_INT32_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq7d4g/U_INT32_SIZE.c
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq7d4g/U_INT32_SIZE.c:27:22: error: 'u_int32_t' undeclared here (not in a function); did you mean 'uint32_t'?
+           27 | #define SIZE (sizeof(u_int32_t))
+              |                      ^~~~~~~~~
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uq7d4g/U_INT32_SIZE.c:29:12: note: in expansion of macro 'SIZE'
+           29 |   ('0' + ((SIZE / 10000)%10)),
+              |            ^~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:9 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int64_t"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rynzgp"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rynzgp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT64_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rynzgp'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_0536c
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_0536c.dir/INT64_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rynzgp/INT64_SIZE.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_0536c.dir/INT64_SIZE.c.obj -o cmTC_0536c.exe -Wl,--out-implib,libcmTC_0536c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:10 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of short"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mpp7ma"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mpp7ma"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_SHORT_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mpp7ma'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_2e554
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_2e554.dir/SHORT_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mpp7ma/SHORT_SIZE.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_2e554.dir/SHORT_SIZE.c.obj -o cmTC_2e554.exe -Wl,--out-implib,libcmTC_2e554.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:11 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2unf88"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2unf88"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2unf88'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_049d8
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_049d8.dir/INT_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2unf88/INT_SIZE.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_049d8.dir/INT_SIZE.c.obj -o cmTC_049d8.exe -Wl,--out-implib,libcmTC_049d8.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:12 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of long"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s2b03z"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s2b03z"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LONG_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s2b03z'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_63052
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_63052.dir/LONG_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s2b03z/LONG_SIZE.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_63052.dir/LONG_SIZE.c.obj -o cmTC_63052.exe -Wl,--out-implib,libcmTC_63052.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/ogg-src/cmake/CheckSizes.cmake:13 (check_type_size)"
+      - "cmake-build-debug/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of long long"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vv4kcv"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vv4kcv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LONG_LONG_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vv4kcv'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_178eb
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_178eb.dir/LONG_LONG_SIZE.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vv4kcv/LONG_LONG_SIZE.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_178eb.dir/LONG_LONG_SIZE.c.obj -o cmTC_178eb.exe -Wl,--out-implib,libcmTC_178eb.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug/_deps/flac-src/cmake/UseSystemExtensions.cmake:3 (check_c_source_compiles)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:107 (include)"
+    checks:
+      - "Performing Test HAVE_MBSTATE"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bwkz5"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bwkz5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_MBSTATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bwkz5'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_42f90
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DHAVE_MBSTATE  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_42f90.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bwkz5/src.c
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bwkz5/src.c:4:9: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+            4 |     int main() { return 0; }
+              |         ^~~~
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_42f90.dir/src.c.obj -o cmTC_42f90.exe -Wl,--out-implib,libcmTC_42f90.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug/_deps/flac-src/cmake/UseSystemExtensions.cmake:16 (check_c_source_compiles)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:107 (include)"
+    checks:
+      - "Performing Test DODEFINE_EXTENSIONS"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k7whk1"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k7whk1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "DODEFINE_EXTENSIONS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k7whk1'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_c529c
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DDODEFINE_EXTENSIONS  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_c529c.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k7whk1/src.c
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k7whk1/src.c:36:9: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+           36 |     int main() { return 0; }
+              |         ^~~~
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_c529c.dir/src.c.obj -o cmTC_c529c.exe -Wl,--out-implib,libcmTC_c529c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:111 (check_include_file)"
+    checks:
+      - "Looking for byteswap.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jguw41"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jguw41"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_BYTESWAP_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jguw41'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_b5cab
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_b5cab.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jguw41/CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_b5cab.dir/CheckIncludeFile.c.obj 
+        C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_b5cab.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jguw41/CheckIncludeFile.c
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jguw41/CheckIncludeFile.c:1:10: fatal error: byteswap.h: No such file or directory
+            1 | #include <byteswap.h>
+              |          ^~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:112 (check_include_file)"
+    checks:
+      - "Looking for inttypes.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kh47dc"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kh47dc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INTTYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kh47dc'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_7bb06
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_7bb06.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kh47dc/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_7bb06.dir/CheckIncludeFile.c.obj -o cmTC_7bb06.exe -Wl,--out-implib,libcmTC_7bb06.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:114 (check_include_file)"
+    checks:
+      - "Looking for stdbool.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b9s5qz"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b9s5qz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STDBOOL_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b9s5qz'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_684bc
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_684bc.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b9s5qz/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_684bc.dir/CheckIncludeFile.c.obj -o cmTC_684bc.exe -Wl,--out-implib,libcmTC_684bc.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:115 (check_include_file)"
+    checks:
+      - "Looking for arm_neon.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i8askz"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i8askz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "FLAC__HAS_NEONINTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i8askz'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_59093
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_59093.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i8askz/CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_59093.dir/CheckIncludeFile.c.obj 
+        C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_59093.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i8askz/CheckIncludeFile.c
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i8askz/CheckIncludeFile.c:1:10: fatal error: arm_neon.h: No such file or directory
+            1 | #include <arm_neon.h>
+              |          ^~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:124 (check_include_file)"
+    checks:
+      - "Looking for x86intrin.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k43iqi"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k43iqi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "FLAC__HAS_X86INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k43iqi'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_873d1
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_873d1.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k43iqi/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_873d1.dir/CheckIncludeFile.c.obj -o cmTC_873d1.exe -Wl,--out-implib,libcmTC_873d1.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:127 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ejs1ax"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ejs1ax"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ejs1ax'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_2f32a
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=fseeko -fdiagnostics-color=always -o CMakeFiles/cmTC_2f32a.dir/CheckFunctionExists.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ejs1ax/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=fseeko  CMakeFiles/cmTC_2f32a.dir/CheckFunctionExists.c.obj -o cmTC_2f32a.exe -Wl,--out-implib,libcmTC_2f32a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:129 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BSWAP16"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7ghkbh"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7ghkbh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_BSWAP16"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7ghkbh'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_2c634
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DHAVE_BSWAP16  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_2c634.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7ghkbh/src.c
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7ghkbh/src.c:1:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+            1 | int main() { return __builtin_bswap16 (0) ; }
+              |     ^~~~
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_2c634.dir/src.c.obj -o cmTC_2c634.exe -Wl,--out-implib,libcmTC_2c634.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:130 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BSWAP32"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5q1r09"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5q1r09"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_BSWAP32"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5q1r09'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_ef5ac
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DHAVE_BSWAP32  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_ef5ac.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5q1r09/src.c
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5q1r09/src.c:1:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+            1 | int main() { return __builtin_bswap32 (0) ; }
+              |     ^~~~
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_ef5ac.dir/src.c.obj -o cmTC_ef5ac.exe -Wl,--out-implib,libcmTC_ef5ac.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:131 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_LANGINFO_CODESET"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s7g9v1"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s7g9v1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LANGINFO_CODESET"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s7g9v1'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_afe86
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DHAVE_LANGINFO_CODESET  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_afe86.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s7g9v1/src.c
+        FAILED: CMakeFiles/cmTC_afe86.dir/src.c.obj 
+        C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DHAVE_LANGINFO_CODESET  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_afe86.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s7g9v1/src.c
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s7g9v1/src.c:2:14: fatal error: langinfo.h: No such file or directory
+            2 |     #include <langinfo.h>
+              |              ^~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:142 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_WERROR_FLAG"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8m1fkg"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8m1fkg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_WERROR_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8m1fkg'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_01767
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DHAVE_WERROR_FLAG  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always   -Werror -o CMakeFiles/cmTC_01767.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8m1fkg/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_01767.dir/src.c.obj -o cmTC_01767.exe -Wl,--out-implib,libcmTC_01767.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:143 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_DECL_AFTER_STMT_FLAG"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c2ofbr"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c2ofbr"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_DECL_AFTER_STMT_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c2ofbr'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_b54f9
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DHAVE_DECL_AFTER_STMT_FLAG  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always   -Wdeclaration-after-statement -o CMakeFiles/cmTC_b54f9.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c2ofbr/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_b54f9.dir/src.c.obj -o cmTC_b54f9.exe -Wl,--out-implib,libcmTC_b54f9.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:144 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_STACKREALIGN_FLAG"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vycmoh"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vycmoh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STACKREALIGN_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vycmoh'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_b911d
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DHAVE_STACKREALIGN_FLAG  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always   -mstackrealign -o CMakeFiles/cmTC_b911d.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vycmoh/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_b911d.dir/src.c.obj -o cmTC_b911d.exe -Wl,--out-implib,libcmTC_b911d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "cmake-build-debug/_deps/flac-src/CMakeLists.txt:145 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_WEFFCXX_FLAG"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-x3qkps"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-x3qkps"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-Wall -Wextra -Wcast-align -Wshadow -Wwrite-strings -Wctor-dtor-privacy -Wnon-virtual-dtor -Wreorder -Wsign-promo -Wundef "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_WEFFCXX_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-x3qkps'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_22397
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -DHAVE_WEFFCXX_FLAG  -Wall -Wextra -Wcast-align -Wshadow -Wwrite-strings -Wctor-dtor-privacy -Wnon-virtual-dtor -Wreorder -Wsign-promo -Wundef   -fdiagnostics-color=always   -Weffc++ -o CMakeFiles/cmTC_22397.dir/src.cxx.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-x3qkps/src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -Wall -Wextra -Wcast-align -Wshadow -Wwrite-strings -Wctor-dtor-privacy -Wnon-virtual-dtor -Wreorder -Wsign-promo -Wundef  CMakeFiles/cmTC_22397.dir/src.cxx.obj -o cmTC_22397.exe -Wl,--out-implib,libcmTC_22397.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/src/libFLAC/CMakeLists.txt:3 (check_include_file)"
+    checks:
+      - "Looking for cpuid.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7hhtqc"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7hhtqc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_CPUID_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7hhtqc'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_c3b9d
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_c3b9d.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7hhtqc/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_c3b9d.dir/CheckIncludeFile.c.obj -o cmTC_c3b9d.exe -Wl,--out-implib,libcmTC_c3b9d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/src/libFLAC/CMakeLists.txt:4 (check_include_file)"
+    checks:
+      - "Looking for sys/param.h"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ggf4sv"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ggf4sv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_SYS_PARAM_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ggf4sv'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_24a50
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_24a50.dir/CheckIncludeFile.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ggf4sv/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_24a50.dir/CheckIncludeFile.c.obj -o cmTC_24a50.exe -Wl,--out-implib,libcmTC_24a50.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/src/libFLAC/CMakeLists.txt:7 (check_function_exists)"
+    checks:
+      - "Looking for lround"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ipvxa4"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ipvxa4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LROUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ipvxa4'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_d83bf
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=lround -fdiagnostics-color=always -o CMakeFiles/cmTC_d83bf.dir/CheckFunctionExists.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ipvxa4/CheckFunctionExists.c
+        <command-line>: warning: conflicting types for built-in function 'lround'; expected 'long int(double)' [-Wbuiltin-declaration-mismatch]
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ipvxa4/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+            7 |   CHECK_FUNCTION_EXISTS(void);
+              |   ^~~~~~~~~~~~~~~~~~~~~
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ipvxa4/CheckFunctionExists.c:1:1: note: 'lround' is declared in header '<math.h>'
+          +++ |+#include <math.h>
+            1 | #ifdef CHECK_FUNCTION_EXISTS
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=lround  CMakeFiles/cmTC_d83bf.dir/CheckFunctionExists.c.obj -o cmTC_d83bf.exe -Wl,--out-implib,libcmTC_d83bf.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/flac-src/cmake/CheckCPUArch.cmake:6 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/cmake/CheckCPUArch.cmake:18 (_CHECK_CPU_ARCH)"
+      - "cmake-build-debug/_deps/flac-src/src/libFLAC/CMakeLists.txt:13 (check_cpu_arch_x64)"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_FLAC__CPU_X86_64"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_9457a
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always -o CMakeFiles/cmTC_9457a.dir/CheckCPUArch.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-build/CMakeFiles/CMakeTmp/CheckCPUArch.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_9457a.dir/CheckCPUArch.c.obj -o cmTC_9457a.exe -Wl,--out-implib,libcmTC_9457a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake-build-debug/_deps/flac-src/src/libFLAC/CMakeLists.txt:101 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_ASSOC_MATH"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rsa56m"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rsa56m"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_ASSOC_MATH"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rsa56m'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_90d08
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DHAVE_ASSOC_MATH  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline   -fdiagnostics-color=always   -fassociative-math -fno-signed-zeros -fno-trapping-math -freciprocal-math -o CMakeFiles/cmTC_90d08.dir/src.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rsa56m/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_90d08.dir/src.c.obj -o cmTC_90d08.exe -Wl,--out-implib,libcmTC_90d08.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "cmake-build-debug/_deps/flac-src/microbench/CMakeLists.txt:6 (check_function_exists)"
+    checks:
+      - "Looking for clock_gettime"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1s2pjp"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1s2pjp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_CLOCK_GETTIME"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1s2pjp'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_4736d
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=clock_gettime -fdiagnostics-color=always -o CMakeFiles/cmTC_4736d.dir/CheckFunctionExists.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1s2pjp/CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=clock_gettime  CMakeFiles/cmTC_4736d.dir/CheckFunctionExists.c.obj -o cmTC_4736d.exe -Wl,--out-implib,libcmTC_4736d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lrt  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: cmTC_4736d.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=clock_gettime  CMakeFiles/cmTC_4736d.dir/CheckFunctionExists.c.obj -o cmTC_4736d.exe -Wl,--out-implib,libcmTC_4736d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lrt  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin/ld.exe: cannot find -lrt: No such file or directory\x0d
+        collect2.exe: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/steph/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "cmake-build-debug/_deps/vorbis-src/CMakeLists.txt:62 (check_library_exists)"
+    checks:
+      - "Looking for floor in m"
+    directories:
+      source: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-np1f87"
+      binary: "C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-np1f87"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/sfml-src/cmake/Modules/;C:/Users/steph/NewSudokuProject/cmake-build-debug/_deps/vorbis-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LIBM"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-np1f87'
+        
+        Run Build Command(s): C:/Users/steph/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_26850
+        [1/2] C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=floor -fdiagnostics-color=always -o CMakeFiles/cmTC_26850.dir/CheckFunctionExists.c.obj -c C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-np1f87/CheckFunctionExists.c
+        <command-line>: warning: conflicting types for built-in function 'floor'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-np1f87/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+            7 |   CHECK_FUNCTION_EXISTS(void);
+              |   ^~~~~~~~~~~~~~~~~~~~~
+        C:/Users/steph/NewSudokuProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-np1f87/CheckFunctionExists.c:1:1: note: 'floor' is declared in header '<math.h>'
+          +++ |+#include <math.h>
+            1 | #ifdef CHECK_FUNCTION_EXISTS
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\steph\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=floor  CMakeFiles/cmTC_26850.dir/CheckFunctionExists.c.obj -o cmTC_26850.exe -Wl,--out-implib,libcmTC_26850.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...
