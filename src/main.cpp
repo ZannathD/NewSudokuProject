@@ -71,12 +71,18 @@ bool Solution(int playerBoard[9][9])
     }
     return true;
 }
+    bool isMouseOver(sf::RectangleShape& button, sf::RenderWindow& window)
+    {
+        sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
+        return button.getGlobalBounds().contains(static_cast<sf::Vector2f>(mousePosition));
+    }
 
 
 int main()
 {
     int column, row;
     bool keyDownProcessed = false;
+    bool game = false;
     int playerBoard [9][9] =
         {
         {0, 3, 0, 6, 0, 0, 0, 8, 0},
@@ -106,15 +112,15 @@ int main()
 
     int solnBoard [9][9] =
     {
-     {5, 3, 9, 6, 2, 7, 1, 8, 4},
-     {7, 8, 6, 1, 4, 9, 3, 2, 5},
-     {1, 2, 4, 8, 3, 5, 6, 9, 7},
-     {9, 5, 8, 7, 6, 4, 2, 1, 3},
-     {4, 7, 2, 3, 8, 1, 9, 5, 6},
-     {6, 1, 3, 9, 5, 2, 7, 4, 8},
-     {2, 4, 7, 5, 1, 6, 8, 3, 9},
-     {3, 9, 5, 2, 7, 8, 4, 6, 1},
-     {8, 6, 1, 4, 9, 3, 5, 7, 2}
+        {5, 3, 9, 6, 2, 7, 1, 8, 4},
+        {7, 8, 6, 1, 4, 9, 3, 2, 5},
+        {1, 2, 4, 8, 3, 5, 6, 9, 7},
+        {9, 5, 8, 7, 6, 4, 2, 1, 3},
+        {4, 7, 2, 3, 8, 1, 9, 5, 6},
+        {6, 1, 3, 9, 5, 2, 7, 4, 8},
+        {2, 4, 7, 5, 1, 6, 8, 3, 9},
+        {3, 9, 5, 2, 7, 8, 4, 6, 1},
+        {8, 6, 1, 4, 9, 3, 5, 7, 2}
     };
 
     //Sudoku Board specifications
@@ -125,18 +131,19 @@ int main()
 
 
     //Setting up which font to use
-    sf::Font font;
-    if (!font.openFromFile("../assets/arial.ttf"))
+    sf::Font font1;
+    if (!font1.openFromFile("../assets/arial.ttf"))
     {
         std::cerr << "Error loading font!\n";
         return -1;
     }
 
-    // Declaring text, and what text to use  -- RENAME -- NUMBERS ON BOARD --
-    sf::Text text(font); //Declare the text object
-    text.setFont(font);
-    text.setCharacterSize(30);
-    text.setStyle(sf::Text::Regular);
+    sf::Font font2;
+    if (!font2.openFromFile("../../assets/JAPF.TTF"))
+    {
+        std::cerr << "Error loading font!\n";
+        return -2;
+    }
 
     sf::Texture background;
     background.loadFromFile("../../assets/background.jpg");
@@ -151,6 +158,58 @@ int main()
     window.setFramerateLimit(144);
 
 
+    // Load Main Menu Image
+     const sf::Texture texture("../../assets/IMG_MainMenu.jpg");
+     sf::Sprite sprite(texture);
+     sprite.setScale({0.5,1/2.f});
+
+
+    //Creating title of game on main menu
+    sf::Text titleText(font2, "Single Soudoku", 100);
+    titleText.setPosition(sf::Vector2f(460,260));
+    titleText.setFillColor(sf::Color::Black);
+
+     // Creating Button 1
+     sf::RectangleShape button1(sf::Vector2f(200,50));
+     button1.setPosition(sf::Vector2f(840,515));
+     button1.setFillColor(sf::Color::White);
+
+    //Creating Text for Button 1
+     sf::Text button1Text(font2, "PLAY!",20);
+     button1Text.setFillColor(sf::Color::Black);
+    //Text for Button 1 - position
+    button1Text.setPosition({915.f, 530.f });
+
+
+    //Create Button 2
+    sf::RectangleShape button2(sf::Vector2f(200,50));
+    button2.setPosition(sf::Vector2f(840,585));
+    button2.setFillColor(sf::Color::White);
+    //Text for Button 2
+    sf::Text button2Text(font2, "Settings",20);
+    button2Text.setFillColor(sf::Color::Black);
+    //Text for Button 2 - position
+    button2Text.setPosition({900.f, 600.f });
+
+
+    //Create Button 3
+    sf::RectangleShape button3(sf::Vector2f(200,50));
+    button3.setPosition(sf::Vector2f(840,655));
+    button3.setFillColor(sf::Color::White);
+    //Text for Button 2
+    sf::Text button3Text(font2, "Quit",20);
+    button3Text.setFillColor(sf::Color::Black);
+    //Text for Button 2 - position
+    button3Text.setPosition({920.f, 670.f });
+
+
+
+
+
+
+     //Function to check if mouse is over the button
+
+
     //Load music to play
     sf::Music music;
     if (!music.openFromFile("../assets/chill_Lofi.wav"))
@@ -162,13 +221,51 @@ int main()
 
     while (window.isOpen())
     {
-
         while (const std::optional event = window.pollEvent())
         {
             if (event->is<sf::Event::Closed>())
             {
                 window.close();
             }
+
+
+
+
+        //Button 1 - Change color when hovering over
+           if (isMouseOver(button1, window))
+           {
+               button1.setFillColor(sf::Color(128,128,128));
+           }
+           else
+           {
+               button1.setFillColor(sf::Color::White);
+           }
+            //Button 2 change color when hovering
+            if (isMouseOver(button2, window))
+            {
+                button2.setFillColor(sf::Color(128,128,128));
+            }
+            else
+            {
+                button2.setFillColor(sf::Color::White);
+            }
+            //Button 3 change color when hovering
+            if (isMouseOver(button3, window))
+            {
+                button3.setFillColor(sf::Color(128,128,128));
+            }
+            else
+            {
+                button3.setFillColor(sf::Color::White);
+            }
+
+
+
+
+
+
+
+
             //Mouse input for selecting boxes
             if (isButtonPressed(sf::Mouse::Button::Left))
             {
@@ -310,10 +407,37 @@ int main()
 
 
         window.clear();
+    if (game == false)
+    {
+        window.draw(sprite);
+        window.draw(button1);
+        window.draw(button1Text);
+        window.draw(button2);
+        window.draw(button2Text);
+        window.draw(button3);
+        window.draw(button3Text);
+        window.draw(titleText);
+        if (isButtonPressed(sf::Mouse::Button::Left))
+        {
+            sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
+            if (isMouseOver(button1, window))
+            {
+                game = true;
+            }
+        }
+        if(isButtonPressed(sf::Mouse::Button::Left))
+        {
 
+            sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
+            if (isMouseOver(button3, window))
+            {
+                window.close();
+            }
+        }
+    }
+    else
+    {
         window.draw(sprBackground);
-
-        //Creating blank sudoku grid
         for (column = 0; column < 9; column++)
         {
             for (row = 0; row < 9; row++)
@@ -329,8 +453,8 @@ int main()
                 box.setOutlineColor(outlineColor);
                 window.draw(box);
 
-                }
             }
+        }
 
 
         //Filling out table with initial table and user table
@@ -340,26 +464,27 @@ int main()
             {
                 if (playerBoard[row][column] != 0 && initialBoard[row][column] == 0)
                 {
-                    sf::Text text(font, std::to_string(playerBoard[row][column]), 30);
+                    sf::Text text(font1, std::to_string(playerBoard[row][column]), 30);
                     text.setPosition(sf::Vector2f(690 + column * boxSize + 20, 270 + row * boxSize + 15));
                     text.setFillColor(sf::Color::Blue);
                     window.draw(text);
                 }
                 if (initialBoard[row][column] != 0)
                 {
-                   // std::cout << "Text position: (" << column * boxSize + 20 << ", " << row * boxSize + 15 << ")" << std::endl;
-                    sf::Text text(font, std::to_string(initialBoard[row][column]), 30);
+                    // std::cout << "Text position: (" << column * boxSize + 20 << ", " << row * boxSize + 15 << ")" << std::endl;
+                    sf::Text text(font1, std::to_string(initialBoard[row][column]), 30);
                     text.setPosition(sf::Vector2f(690 + column * boxSize + 20, 270 + row * boxSize + 15));
                     text.setFillColor(sf::Color::Black);
                     window.draw(text);
                 }
             }
-
-
         }
 
-        window.display();
     }
-    std::cout << Solution(playerBoard) << std::endl;
+
+    window.display();
+    }
 }
+   // std::cout << Solution(playerBoard) << std::endl;
+
 
