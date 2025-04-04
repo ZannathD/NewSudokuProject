@@ -12,8 +12,26 @@
 #include <optional>
 #include <unordered_set>
 #include <string>
+#include <array>
 
 //Make a header file
+class Box
+{
+public:
+    // Constructor: set everything once
+    sf::RectangleShape shape;
+    Box(float xCoord, float yCoord, float width, float height, sf::Color color = sf::Color::White) {
+        shape.setSize({width, height});
+        shape.setPosition({xCoord, yCoord});
+        color.a = 200;
+        shape.setFillColor(color);
+        shape.setOutlineColor(sf::Color::Black);
+        shape.setOutlineThickness(2.f);
+    }
+};
+
+
+
 
 //Checking Sudoku board
 bool Solution(int playerBoard[9][9])
@@ -171,8 +189,12 @@ int main()
 {
     int column, row, minutes = 0;
     bool keyDownProcessed = false, complete = false;
-    bool game = false;
-    int playerBoard [9][9] =
+    bool playGame = false;
+    int difficulty = -1;
+    int playerBoard[9][9], initialBoard[9][9];
+    sf::Time inputDelay = sf::milliseconds(300);
+
+    int easyBoard [9][9] =
         {
         {0, 3, 0, 6, 0, 0, 0, 8, 0},
         {7, 8, 0, 1, 4, 9, 0, 0, 5},
@@ -184,34 +206,31 @@ int main()
         {0, 0, 5, 2, 0, 0, 0, 0, 1},
         {0, 0, 0, 0, 9, 3, 5, 7, 2}
         };
+    int mediumBoard [9][9] =
+        {
+        {9, 0, 6, 2, 4, 8, 3, 0, 1},
+        {4, 0, 7, 6, 1, 0, 5, 8, 9},
+        {8, 0, 3, 0, 0, 0, 0, 2, 0},
+        {6, 0, 0, 0, 0, 0, 1, 0, 7},
+        {0, 8, 0, 7, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 2, 1, 0, 6, 5},
+        {0, 6, 0, 0, 8, 7, 9, 0, 0},
+        {2, 9, 0, 1, 3, 0, 0, 0, 0},
+        {1, 0, 0, 0, 0, 0, 0, 5, 0}
+        };
+    int hardBoard [9][9] =
+        {
+        {3, 1, 0, 7, 5, 9, 2, 0, 6},
+        {2, 5, 0, 0, 0, 0, 0, 9, 0},
+        {8, 7, 0, 6, 0, 3, 4, 5, 1},
+        {0, 0, 9, 6, 0, 0, 0, 3, 4},
+        {0, 0, 5, 0, 0, 8, 0, 0, 0},
+        {0, 3, 0, 0, 0, 0, 6, 0, 8},
+        {0, 9, 1, 2, 0, 6, 0, 0, 0},
+        {0, 6, 0, 0, 0, 0, 0, 4, 0},
+        {0, 0, 3, 5, 8, 0, 1, 0, 0}
+        };
 
-
-    int initialBoard [9][9] =
-    {
-        {0, 3, 0, 6, 0, 0, 0, 8, 0},
-        {7, 8, 0, 1, 4, 9, 0, 0, 5},
-        {1, 2, 4, 0, 3, 5, 0, 0, 0},
-        {0, 5, 0, 7, 0, 0, 0, 1, 0},
-        {0, 0, 2, 3, 0, 0, 0, 0, 6},
-        {0, 1, 3, 0, 0, 0, 0, 4, 8},
-        {0, 4, 0, 5, 1, 6, 3, 0, 9},
-        {0, 0, 5, 2, 0, 0, 0, 0, 1},
-        {0, 0, 0, 0, 9, 3, 5, 7, 2}
-    };
-
-    //useless basically
-    int solnBoard [9][9] =
-    {
-        {5, 3, 9, 6, 2, 7, 1, 8, 4},
-        {7, 8, 6, 1, 4, 9, 3, 2, 5},
-        {1, 2, 4, 8, 3, 5, 6, 9, 7},
-        {9, 5, 8, 7, 6, 4, 2, 1, 3},
-        {4, 7, 2, 3, 8, 1, 9, 5, 6},
-        {6, 1, 3, 9, 5, 2, 7, 4, 8},
-        {2, 4, 7, 5, 1, 6, 8, 3, 9},
-        {3, 9, 5, 2, 7, 8, 4, 6, 1},
-        {8, 6, 1, 4, 9, 3, 5, 7, 2}
-    };
 
     //Sudoku Board specifications
     float boxSize = 60.f;
@@ -240,10 +259,19 @@ int main()
     checkButtonText.setPosition(sf::Vector2f(1137,885));
     checkButtonText.setFillColor(sf::Color::Black);
 
+
+    //Difficulty Selection Background
+    sf::Texture difficultyBackground;
+    difficultyBackground.loadFromFile("../../assets/difficultyBkgrnd.jpg");
+    sf::Sprite sprDifficultyBackground(difficultyBackground);
+    sprDifficultyBackground.setScale(sf::Vector2f(.37f,.3125f));
+
+
+
     //Gameplay Background
-    sf::Texture background;
-    background.loadFromFile("../../assets/background.jpg");
-    sf::Sprite sprBackground(background);
+    sf::Texture gameBackground;
+    gameBackground.loadFromFile("../../assets/background.jpg");
+    sf::Sprite sprBackground(gameBackground);
 
     sf::Texture congrats;
     congrats.loadFromFile("../../assets/congrats.png");
@@ -426,7 +454,7 @@ int main()
 
 
         window.clear();
-        if (game == false)
+        if (playGame == false)
         {
             window.draw(sprite);
             window.draw(button1);
@@ -438,23 +466,102 @@ int main()
             window.draw(titleText);
             if (isButtonPressed(sf::Mouse::Button::Left))
             {
-                sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
                 if (isMouseOver(button1, window))
                 {
-                    game = true;
+                    playGame = true;
+                    keyDownProcessed = true;
+                    sf::sleep(sf::milliseconds(400));
                 }
             }
             if(isButtonPressed(sf::Mouse::Button::Left))
             {
-
-                sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
                 if (isMouseOver(button3, window))
                 {
                     window.close();
                 }
             }
         }
-        else
+        else if (playGame == true && difficulty == -1)
+        {
+            window.draw(sprDifficultyBackground);
+
+            //Easy button
+            Box easyButton(370, 540, 100, 50, sf::Color::White);
+            window.draw(easyButton.shape);
+            sf::Text easyButtonText(font1, "Easy",30);
+            easyButtonText.setFillColor(sf::Color::Black);
+            easyButtonText.setPosition(sf::Vector2f(385, 545));
+            window.draw(easyButtonText);
+
+            //Medium Button
+            Box mediumButton(910, 540, 100, 50, sf::Color::White);
+            window.draw(mediumButton.shape);
+            sf::Text mediumButtonText(font1, "Medium",25);
+            mediumButtonText.setFillColor(sf::Color::Black);
+            mediumButtonText.setPosition(sf::Vector2f(913, 548));
+            window.draw(mediumButtonText);
+
+            //Hard Button
+            Box hardButton(1450, 540, 100, 50, sf::Color::White);
+            window.draw(hardButton.shape);
+            sf::Text hardButtonText(font1, "Hard",30);
+            hardButtonText.setFillColor(sf::Color::Black);
+            hardButtonText.setPosition(sf::Vector2f(1465, 545));
+            window.draw(hardButtonText);
+
+            if (isButtonPressed(sf::Mouse::Button::Left))
+            {
+                if (isMouseOver(easyButton.shape, window) && keyDownProcessed == false)
+                {
+                    for (int counter = 0; counter < 9; counter++)
+                    {
+                        for (int iterator = 0; iterator < 9; iterator++)
+                        {
+                            playerBoard[counter][iterator] = easyBoard[counter][iterator];
+                            initialBoard[counter][iterator] = easyBoard[counter][iterator];
+                        }
+                    }
+                    std::cout << "easy clicked" << std::endl;
+                    keyDownProcessed = true;
+                    difficulty = 1;
+                }
+            }
+            if (isButtonPressed(sf::Mouse::Button::Left))
+            {
+                if (isMouseOver(mediumButton.shape, window))
+                {
+                    for (int counter = 0; counter < 9; counter++)
+                    {
+                        for (int iterator = 0; iterator < 9; iterator++)
+                        {
+                            playerBoard[counter][iterator] = mediumBoard[counter][iterator];
+                            initialBoard[counter][iterator] = mediumBoard[counter][iterator];
+                        }
+                    }
+                    std::cout << "med clicked" << std::endl;
+                    keyDownProcessed = true;
+                    difficulty = 2;
+                }
+            }
+            if (isButtonPressed(sf::Mouse::Button::Left))
+            {
+                if (isMouseOver(hardButton.shape, window))
+                {
+                    for (int counter = 0; counter < 9; counter++)
+                    {
+                        for (int iterator = 0; iterator < 9; iterator++)
+                        {
+                            playerBoard[counter][iterator] = hardBoard[counter][iterator];
+                            initialBoard[counter][iterator] = hardBoard[counter][iterator];
+                        }
+                    }
+                    std::cout << "hard clicked" << std::endl;
+                    keyDownProcessed = true;
+                    difficulty = 3;
+                }
+            }
+        }
+        else if (playGame == true && difficulty != -1)
         {
             window.draw(sprBackground);
 
@@ -465,7 +572,14 @@ int main()
                 {
                     sf::RectangleShape box(sf::Vector2f(boxSize, boxSize));
                     box.setPosition(sf::Vector2f(690 + column * boxSize, 270 + row * boxSize));
-                    box.setFillColor(boxColor);
+                    // Apply shading to every other 3x3 block
+                    int blockColumn = column / 3;
+                    int blockRow = row / 3;
+                    if ((blockColumn + blockRow) % 2 == 0) {
+                        box.setFillColor(sf::Color(210,210,210,200));
+                    } else {
+                        box.setFillColor(boxColor);
+                    }
                     //Highlighting selected cell for clarity
                     if (column == selectedColumn && row == selectedRow)
                     {
@@ -474,7 +588,6 @@ int main()
                     box.setOutlineThickness(2.f);
                     box.setOutlineColor(outlineColor);
                     window.draw(box);
-
                 }
             }
 
@@ -517,6 +630,19 @@ int main()
             checkButton.setOutlineThickness(2.f);
             window.draw(checkButton);
             window.draw(checkButtonText);
+
+            Box returnButton(690, 880, 100, 50, sf::Color::White);
+            window.draw(returnButton.shape);
+            sf::Text menu(font1, "Return", 28);
+            menu.setFillColor(sf::Color::Black);
+            menu.setPosition(sf::Vector2f(700, 885));
+            window.draw(menu);
+            if (isButtonPressed(sf::Mouse::Button::Left) && isMouseOver(returnButton.shape, window))
+            {
+                playGame = false;
+                difficulty = -1;
+                window.clear();
+            }
 
 
             if (isButtonPressed(sf::Mouse::Button::Left) && (isMouseOver(checkButton, window)) && Solution(playerBoard) == 1)
