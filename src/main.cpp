@@ -249,6 +249,7 @@ int main()
     congrats.loadFromFile("../../assets/congrats.png");
     sf::Sprite sprCongrats(congrats);
     sprCongrats.setScale(sf::Vector2f(0.47f, 0.5f));
+    sprCongrats.setPosition(sf::Vector2f(400, -150));
 
     //User Input default values for grid selection
     int selectedRow = -2, selectedColumn = -2;
@@ -518,7 +519,7 @@ int main()
             window.draw(checkButtonText);
 
 
-            if (isButtonPressed(sf::Mouse::Button::Left) && (isMouseOver(checkButton, window)) && Solution(solnBoard) == 1)
+            if (isButtonPressed(sf::Mouse::Button::Left) && (isMouseOver(checkButton, window)) && Solution(playerBoard) == 1)
             {
                 complete = true;
             }
