@@ -4,23 +4,20 @@
 //Description:        A program in C++ that allows a user to play a simple game of Sudoku
 //Log:                4/1 - added background and centered sudoku board on screen and made semi-transparent
 
-
-
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <optional>
 #include <unordered_set>
 #include <string>
-#include <array>
 
-//Make a header file
 class Box
 {
 public:
     // Constructor: set everything once
     sf::RectangleShape shape;
-    Box(float xCoord, float yCoord, float width, float height, sf::Color color = sf::Color::White) {
+    Box(float xCoord, float yCoord, float width, float height, sf::Color color = sf::Color::White)
+    {
         shape.setSize({width, height});
         shape.setPosition({xCoord, yCoord});
         color.a = 200;
@@ -33,7 +30,7 @@ public:
 
 
 
-//Checking Sudoku board
+//Checking Sudoku board solution
 bool Solution(int playerBoard[9][9])
 {
    for (int row = 0; row < 9; row++)
@@ -41,13 +38,12 @@ bool Solution(int playerBoard[9][9])
        std::unordered_set<int> rowSet;
        for (int column = 0; column < 9; column++)
        {
-           if (playerBoard[row][column] != 0)
+           //Check if any numbers are duplicated in row
+           if (playerBoard[row][column] != 0 && rowSet.find(playerBoard[row][column]) != rowSet.end())
            {
-               if (rowSet.find(playerBoard[row][column]) != rowSet.end())
-               {
-                   return false;
-               }
+              return false;
            }
+           //Check that all boxes are filled
            if (playerBoard[row][column] == 0)
            {
                return false;
@@ -61,16 +57,15 @@ bool Solution(int playerBoard[9][9])
         std::unordered_set<int> colSet;
         for (int row = 0; row < 9; ++row)
             {
-            if (playerBoard[row][column] != 0)
+            //Check if any numbers are duplicated in column
+            if (playerBoard[row][column] != 0 && colSet.find(playerBoard[row][column]) != colSet.end())
                 {
-                if (colSet.find(playerBoard[row][column]) != colSet.end())
-                    {
-                    return false;  // Duplicate found in the column
-                    }
-                colSet.insert(playerBoard[row][column]);
+                return false;
                 }
+            colSet.insert(playerBoard[row][column]);
             }
         }
+    //Check if any numbers are duplicated in 3x3 grids
     for (int boxRow = 0; boxRow < 9; boxRow += 3)
     {
         for (int boxCol = 0; boxCol < 9; boxCol += 3)
@@ -85,7 +80,7 @@ bool Solution(int playerBoard[9][9])
                     {
                         if (boxSet.find(currentVal) != boxSet.end())
                         {
-                            return false;  // Duplicate found in the box
+                            return false;
                         }
                         boxSet.insert(currentVal);
                     }
@@ -96,7 +91,7 @@ bool Solution(int playerBoard[9][9])
     return true;
 }
 
-
+//Function to keep player input inside the game board
 void boundaryFix(int &selectedRow, int &selectedColumn)
 {
     if (selectedRow == 9 && selectedColumn == 8 || selectedRow == 8 && selectedColumn == 9)
@@ -131,6 +126,7 @@ void boundaryFix(int &selectedRow, int &selectedColumn)
     }
 }
 
+//Function to allow player to change values on sudoku board
 void playerValueInput (int playerBoard[9][9], int selectedRow, int selectedColumn)
 {
     if (selectedRow != -1 && selectedColumn != -1)
@@ -178,21 +174,40 @@ void playerValueInput (int playerBoard[9][9], int selectedRow, int selectedColum
     }
 }
 
+//Function to CHECK if mouse is over buttons
 bool isMouseOver(sf::RectangleShape& button, sf::RenderWindow& window)
 {
     sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
     return button.getGlobalBounds().contains(static_cast<sf::Vector2f>(mousePosition));
 }
 
+//Function to SHOW if mouse is hovering a button
+void mouseHoverColor(sf::RectangleShape& button, sf::RenderWindow& window)
+{
+    if (isMouseOver(button, window))
+    {
+        button.setFillColor(sf::Color(128,128,128));
+    }
+    else
+    {
+        button.setFillColor(sf::Color::White);
+    }
+}
+
 
 int main()
 {
-    int column, row, minutes = 0;
-    bool keyDownProcessed = false, complete = false;
-    bool playGame = false;
-    int difficulty = -1;
+    //Initializing variables
+    int column, row, minutes = 0, difficulty = -1;;
+    bool keyDownProcessed = false, complete = false, playGame = false;
+
+    //Sudoku Board specifications
+    float boxSize = 60.f;
+    sf::Color boxColor(255, 255,255, 200);
+    sf::Color outlineColor(0, 0, 0);
+
+    //Initialzing boards as arrays
     int playerBoard[9][9], initialBoard[9][9];
-    sf::Time inputDelay = sf::milliseconds(300);
 
     int easyBoard [9][9] =
         {
@@ -232,20 +247,20 @@ int main()
         };
 
 
-    //Sudoku Board specifications
-    float boxSize = 60.f;
-    sf::Color boxColor(255, 255,255, 200);
-    sf::Color outlineColor(0, 0, 0);
-
-
-    //Setting up which font to use
+    //Setting font for difficulty and gameplay
     sf::Font font1;
-    if (!font1.openFromFile("../../assets/arial.ttf"))
-    {
-        std::cerr << "Error loading font!\n";
-        return -1;
+    //Try-Catch for error handling
+    try {
+        if (!font1.openFromFile("../../assets/arial.ttf"))
+        {
+            throw std::runtime_error("Error loading font: ../../assets/arial.ttf");
+        }
+    } catch (const std::runtime_error& error) {
+        std::cerr << error.what() << std::endl;
+        return -1; // Indicate an error occurred
     }
 
+    //Loading font for main menu screen
     sf::Font font2;
     if (!font2.openFromFile("../../assets/JAPF.TTF"))
     {
@@ -259,20 +274,18 @@ int main()
     checkButtonText.setPosition(sf::Vector2f(1137,885));
     checkButtonText.setFillColor(sf::Color::Black);
 
-
     //Difficulty Selection Background
     sf::Texture difficultyBackground;
     difficultyBackground.loadFromFile("../../assets/difficultyBkgrnd.jpg");
     sf::Sprite sprDifficultyBackground(difficultyBackground);
     sprDifficultyBackground.setScale(sf::Vector2f(.37f,.3125f));
 
-
-
     //Gameplay Background
     sf::Texture gameBackground;
     gameBackground.loadFromFile("../../assets/background.jpg");
     sf::Sprite sprBackground(gameBackground);
 
+    //Game puzzle completion image
     sf::Texture congrats;
     congrats.loadFromFile("../../assets/congrats.png");
     sf::Sprite sprCongrats(congrats);
@@ -302,34 +315,36 @@ int main()
     sf::RectangleShape button1(sf::Vector2f(200,50));
     button1.setPosition(sf::Vector2f(840,515));
     button1.setFillColor(sf::Color::White);
-
+    button1.setOutlineColor(sf::Color::Black);
+    button1.setOutlineThickness(2);
     //Creating Text for Button 1
     sf::Text button1Text(font2, "PLAY!",20);
     button1Text.setFillColor(sf::Color::Black);
-    //Text for Button 1 - position
-    button1Text.setPosition({915.f, 530.f });
+    button1Text.setPosition({890.f, 530.f });
 
 
     //Create Button 2
     sf::RectangleShape button2(sf::Vector2f(200,50));
     button2.setPosition(sf::Vector2f(840,585));
     button2.setFillColor(sf::Color::White);
-    //Text for Button 2
+    button2.setOutlineColor(sf::Color::Black);
+    button2.setOutlineThickness(2);
+    //Button 2 text
     sf::Text button2Text(font2, "Settings",20);
     button2Text.setFillColor(sf::Color::Black);
-    //Text for Button 2 - position
-    button2Text.setPosition({900.f, 600.f });
+    button2Text.setPosition({890.f, 600.f });
 
 
     //Create Button 3
     sf::RectangleShape button3(sf::Vector2f(200,50));
     button3.setPosition(sf::Vector2f(840,655));
     button3.setFillColor(sf::Color::White);
+    button3.setOutlineColor(sf::Color::Black);
+    button3.setOutlineThickness(2);
     //Text for Button 3
     sf::Text button3Text(font2, "Quit",20);
     button3Text.setFillColor(sf::Color::Black);
-    //Text for Button 3 - position
-    button3Text.setPosition({920.f, 670.f });
+    button3Text.setPosition({910.f, 670.f });
 
 
     //Load music to play
@@ -344,6 +359,7 @@ int main()
     //Start in-game timer
     sf::Clock clock;
 
+    //Open game!
     while (window.isOpen())
     {
         while (const std::optional event = window.pollEvent())
@@ -354,41 +370,12 @@ int main()
             }
         }
 
-        //Button 1 - Change color when hovering over
-        if (isMouseOver(button1, window))
-        {
-            button1.setFillColor(sf::Color(128,128,128));
-        }
-        else
-        {
-            button1.setFillColor(sf::Color::White);
-        }
-        //Button 2 change color when hovering
-        if (isMouseOver(button2, window))
-        {
-            button2.setFillColor(sf::Color(128,128,128));
-        }
-        else
-        {
-            button2.setFillColor(sf::Color::White);
-        }
-        //Button 3 change color when hovering
-        if (isMouseOver(button3, window))
-        {
-            button3.setFillColor(sf::Color(128,128,128));
-        }
-        else
-        {
-            button3.setFillColor(sf::Color::White);
-        }
+        //Main menu button change color when moused over
+        mouseHoverColor(button1, window);
+        mouseHoverColor(button2, window);
+        mouseHoverColor(button3, window);
 
-        //Mouse input for selecting boxes
-        if (isButtonPressed(sf::Mouse::Button::Left))
-        {
-            sf::Vector2i mousePos = sf::Mouse::getPosition(window);
-            selectedRow = (mousePos.y - 270) / boxSize;
-            selectedColumn = (mousePos.x - 690) / boxSize;
-        }
+
 
         //Timer
         sf::Time timer = clock.getElapsedTime();
@@ -412,7 +399,6 @@ int main()
             if (isKeyPressed(sf::Keyboard::Key::Down))
             {
                 selectedRow = selectedRow + 1;
-
                 keyDownProcessed = true;
             }
             else if (isKeyPressed(sf::Keyboard::Key::Up))
@@ -431,7 +417,6 @@ int main()
             {
                 selectedColumn = selectedColumn - 1;
                 keyDownProcessed = true;
-
             }
         }
 
@@ -452,10 +437,10 @@ int main()
         }
 
 
-
         window.clear();
         if (playGame == false)
         {
+            //Draw main menu
             window.draw(sprite);
             window.draw(button1);
             window.draw(button1Text);
@@ -464,15 +449,18 @@ int main()
             window.draw(button3);
             window.draw(button3Text);
             window.draw(titleText);
+
+            //Check if they press play
             if (isButtonPressed(sf::Mouse::Button::Left))
             {
                 if (isMouseOver(button1, window))
                 {
                     playGame = true;
                     keyDownProcessed = true;
-                    sf::sleep(sf::milliseconds(400));
+                    sleep(sf::milliseconds(300));
                 }
             }
+            //Check if they want to close
             if(isButtonPressed(sf::Mouse::Button::Left))
             {
                 if (isMouseOver(button3, window))
@@ -481,12 +469,14 @@ int main()
                 }
             }
         }
+        //If they did press play, prompt for difficulty
         else if (playGame == true && difficulty == -1)
         {
             window.draw(sprDifficultyBackground);
 
             //Easy button
             Box easyButton(370, 540, 100, 50, sf::Color::White);
+            mouseHoverColor(easyButton.shape, window);
             window.draw(easyButton.shape);
             sf::Text easyButtonText(font1, "Easy",30);
             easyButtonText.setFillColor(sf::Color::Black);
@@ -495,6 +485,7 @@ int main()
 
             //Medium Button
             Box mediumButton(910, 540, 100, 50, sf::Color::White);
+            mouseHoverColor(mediumButton.shape, window);
             window.draw(mediumButton.shape);
             sf::Text mediumButtonText(font1, "Medium",25);
             mediumButtonText.setFillColor(sf::Color::Black);
@@ -503,11 +494,13 @@ int main()
 
             //Hard Button
             Box hardButton(1450, 540, 100, 50, sf::Color::White);
+            mouseHoverColor(hardButton.shape, window);
             window.draw(hardButton.shape);
             sf::Text hardButtonText(font1, "Hard",30);
             hardButtonText.setFillColor(sf::Color::Black);
             hardButtonText.setPosition(sf::Vector2f(1465, 545));
             window.draw(hardButtonText);
+
 
             if (isButtonPressed(sf::Mouse::Button::Left))
             {
@@ -521,7 +514,6 @@ int main()
                             initialBoard[counter][iterator] = easyBoard[counter][iterator];
                         }
                     }
-                    std::cout << "easy clicked" << std::endl;
                     keyDownProcessed = true;
                     difficulty = 1;
                 }
@@ -538,7 +530,6 @@ int main()
                             initialBoard[counter][iterator] = mediumBoard[counter][iterator];
                         }
                     }
-                    std::cout << "med clicked" << std::endl;
                     keyDownProcessed = true;
                     difficulty = 2;
                 }
@@ -555,15 +546,23 @@ int main()
                             initialBoard[counter][iterator] = hardBoard[counter][iterator];
                         }
                     }
-                    std::cout << "hard clicked" << std::endl;
                     keyDownProcessed = true;
                     difficulty = 3;
                 }
             }
         }
+        //If they pressed play and selected which difficulty
         else if (playGame == true && difficulty != -1)
         {
             window.draw(sprBackground);
+
+            //Mouse input for selecting boxes on sudoku grid
+            if (isButtonPressed(sf::Mouse::Button::Left))
+            {
+                sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+                selectedRow = (mousePos.y - 270) / boxSize;
+                selectedColumn = (mousePos.x - 690) / boxSize;
+            }
 
             //Creating blank sudoku grid
             for (column = 0; column < 9; column++)
@@ -628,22 +627,33 @@ int main()
             checkButton.setFillColor(sf::Color::Green);
             checkButton.setOutlineColor(sf::Color::Black);
             checkButton.setOutlineThickness(2.f);
+            if (isMouseOver(checkButton, window))
+            {
+                checkButton.setFillColor(sf::Color(128,128,128));
+            }
+            else
+            {
+                checkButton.setFillColor(sf::Color::Green);
+            }
             window.draw(checkButton);
             window.draw(checkButtonText);
 
+
+            //Button to return to main menu
             Box returnButton(690, 880, 100, 50, sf::Color::White);
+            mouseHoverColor(returnButton.shape, window);
             window.draw(returnButton.shape);
             sf::Text menu(font1, "Return", 28);
             menu.setFillColor(sf::Color::Black);
             menu.setPosition(sf::Vector2f(700, 885));
             window.draw(menu);
+
             if (isButtonPressed(sf::Mouse::Button::Left) && isMouseOver(returnButton.shape, window))
             {
                 playGame = false;
                 difficulty = -1;
                 window.clear();
             }
-
 
             if (isButtonPressed(sf::Mouse::Button::Left) && (isMouseOver(checkButton, window)) && Solution(playerBoard) == 1)
             {
