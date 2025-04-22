@@ -200,7 +200,7 @@ int main()
 {
     //Initializing variables
     int column, row, minutes = 0, difficulty = -1;
-    bool keyDownProcessed = false, complete = false, playGame = false;
+    bool keyDownProcessed = false, complete = false, playGame = false, openSettings = false;
 
     //Sudoku Board specifications
     float boxSize = 60.f;
@@ -286,6 +286,12 @@ int main()
     gameBackground.loadFromFile("../../assets/background.jpg");
     sf::Sprite sprBackground(gameBackground);
 
+    //Settings Background
+    sf::Texture settingsBackground;
+    settingsBackground.loadFromFile("../../assets/settingsBackground.jpg");
+    sf::Sprite sprSettings(settingsBackground);
+
+
     //Game puzzle completion image
     sf::Texture congrats;
     congrats.loadFromFile("../../assets/congrats.png");
@@ -302,9 +308,9 @@ int main()
 
 
     // Load Main Menu Image
-    const sf::Texture texture("../../assets/IMG_MainMenu.jpg");
+    const sf::Texture texture("../../assets/newMM.jpg");
     sf::Sprite sprite(texture);
-    sprite.setScale({0.5,1/2.f});
+    sprite.setScale({1.1995,1.f});
 
 
     //Creating title of game on main menu
@@ -333,7 +339,8 @@ int main()
     //Button 2 text
     sf::Text button2Text(font2, "Settings",20);
     button2Text.setFillColor(sf::Color::Black);
-    button2Text.setPosition({890.f, 600.f });
+    button2Text.setPosition(sf::Vector2f(885, 600));
+
 
 
     //Create Button 3
@@ -346,6 +353,19 @@ int main()
     sf::Text button3Text(font2, "Quit",20);
     button3Text.setFillColor(sf::Color::Black);
     button3Text.setPosition({910.f, 670.f });
+
+    //Return Button on Settings Menu
+    Box settingsReturn(300, 900, 100, 50, sf::Color::White);
+    // Make return text
+    sf::Text settingsReturnText(font1, "Return",25);
+    settingsReturnText.setPosition(sf::Vector2f(311, 910));
+    settingsReturnText.setFillColor(sf::Color::Black);
+    //Make Mute Button
+    Box muteButton(960, 540, 100, 50, sf::Color::White);
+    // Make Mute Text
+    sf::Text muteButtonText(font1, "Mute",25);
+    muteButtonText.setPosition(sf::Vector2f(980, 550));
+    muteButtonText.setFillColor(sf::Color::Black);
 
 
     //Load music to play
@@ -447,7 +467,8 @@ int main()
 
 
         window.clear();
-        if (playGame == false)
+
+        if (playGame == false && openSettings == false)
         {
             //Draw main menu
             window.draw(sprite);
@@ -469,6 +490,14 @@ int main()
                     sleep(sf::milliseconds(300));
                 }
             }
+            if (isButtonPressed(sf::Mouse::Button::Left)) // Check if they press settings
+            {
+                if (isMouseOver(button2, window))
+                {
+                    openSettings = true;
+                }
+            }
+
             //Check if they want to close
             if(isButtonPressed(sf::Mouse::Button::Left))
             {
@@ -477,6 +506,33 @@ int main()
                     window.close();
                 }
             }
+        }
+        if (openSettings == true) //If settings is set to true, draw the settings background
+        {
+            window.draw(sprSettings);
+            window.draw(settingsReturn.shape);
+            window.draw(settingsReturnText);
+            window.draw(muteButton.shape);
+            window.draw(muteButtonText);
+            mouseHoverColor(muteButton.shape, window);
+            mouseHoverColor(settingsReturn.shape, window);
+
+            if (isButtonPressed(sf::Mouse::Button::Left))
+            {
+                if (isMouseOver(muteButton.shape, window))
+                {
+                    music.stop();
+                }
+            }
+
+            if (isButtonPressed(sf::Mouse::Button::Left))
+            {
+                if (isMouseOver(settingsReturn.shape, window))
+                {
+                    openSettings = false;
+                }
+            }
+
         }
         //If they did press play, prompt for difficulty
         else if (playGame == true && difficulty == -1)
