@@ -178,7 +178,8 @@ void playerValueInput (int playerBoard[9][9], int selectedRow, int selectedColum
 bool isMouseOver(sf::RectangleShape& button, sf::RenderWindow& window)
 {
     sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
-    return button.getGlobalBounds().contains(static_cast<sf::Vector2f>(mousePosition));
+    sf::Vector2f worldPosition = window.mapPixelToCoords(mousePosition);
+    return button.getGlobalBounds().contains((worldPosition));
 }
 
 //Function to SHOW if mouse is hovering a button
@@ -198,7 +199,7 @@ void mouseHoverColor(sf::RectangleShape& button, sf::RenderWindow& window)
 int main()
 {
     //Initializing variables
-    int column, row, minutes = 0, difficulty = -1;;
+    int column, row, minutes = 0, difficulty = -1;
     bool keyDownProcessed = false, complete = false, playGame = false;
 
     //Sudoku Board specifications
@@ -217,7 +218,7 @@ int main()
         {0, 5, 0, 7, 0, 0, 0, 1, 0},
         {0, 0, 2, 3, 0, 0, 0, 0, 6},
         {0, 1, 3, 0, 0, 0, 0, 4, 8},
-        {0, 4, 0, 5, 1, 6, 3, 0, 9},
+        {0, 4, 0, 5, 1, 6, 8, 0, 9},
         {0, 0, 5, 2, 0, 0, 0, 0, 1},
         {0, 0, 0, 0, 9, 3, 5, 7, 2}
         };
@@ -296,7 +297,7 @@ int main()
     int selectedRow = -2, selectedColumn = -2;
 
     //Display beginning
-    auto window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "Sudoku, A C++ Project");
+    auto window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "Sudoku, A C++ Project", sf::Style::Resize);
     window.setFramerateLimit(144);
 
 
@@ -380,17 +381,25 @@ int main()
         //Timer
         sf::Time timer = clock.getElapsedTime();
         int seconds = timer.asSeconds();
+        if (difficulty == -1)
+        {
+            minutes = 0;
+            seconds = 0;
+            clock.restart();
+        }
         if (seconds > 59)
         {
             seconds = 0;
             minutes += 1;
             clock.restart();
         }
-        std::string full_Timer_String = std::to_string(minutes) + ":" + (seconds < 10 ? "0" : "") + std::to_string(seconds);
+        std::stringstream timerStream;
+        timerStream << std::setw(2) << std::setfill('0') << minutes << ":" << std::setw(2) << std::setfill('0') << seconds;
+        std::string full_Timer_String = timerStream.str();
         sf::Text textTimer(font1, full_Timer_String, 30);
         textTimer.setStyle(sf::Text::Bold);
         textTimer.setFillColor(sf::Color::Black);
-        textTimer.setPosition(sf::Vector2f(937, 885));
+        textTimer.setPosition(sf::Vector2f(920, 885));
 
 
         //Arrow keys to navigate board
